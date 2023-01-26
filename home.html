@@ -17,9 +17,11 @@
       <div class="child">
         <div class="row">
           <div class="col-auto">
-              <button class="btn btn-success" id="btn-sim" style="font-weight: bold; " data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="bi bi-hand-thumbs-up-fill"></i> SIM</button>
+            <!-- BOTÃO SIM -->
+              <button class="btn btn-success" id="btn-sim" style="font-weight: bold; " data-bs-toggle="modal" data-bs-target="#modalApaixonada" ><i class="bi bi-hand-thumbs-up-fill"></i> SIM</button>
           </div>
-          <div class="col-auto" id="div-btn"  >
+          <div class="col-auto">
+            <!-- BOTÃO NÃO -->
             <button class="btn btn-danger" onmouseenter="movebtn(this)"  onclick="movebtn(this)" style="position: absolute; width: 100px; font-weight: bold; cursor: pointer;" id="btn-nao"><i class="bi bi-hand-thumbs-down-fill"></i> NÃO</button>
           </div>
           
@@ -29,7 +31,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalApaixonada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -56,7 +58,7 @@
     x.style.left = Math.floor((Math.random() * 400)+100)+"px";
     x.style.top = Math.floor((Math.random() * 200)+1)+"px";
     x.style.right = Math.floor((Math.random() * 300)+150)+"px";
-    console.log(x.style.margin);
+   
   }
 
     </script>
