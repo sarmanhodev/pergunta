@@ -1,82 +1,167 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PEDIDO DE NAMORO</title>
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    
-  </head>
-  <body style="background-color: 	#4169E1;">
-    <h1 class="text-center text-white">Quer namorar comigo?</h1>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRÓXIMO DESAFIO</title>
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="banner">
+
+    <video autoplay muted loop>
+      <source src="./video/background.mp4" type="video/mp4">
+    </video>
+
+
     <div class="container">
-      <div class="child">
+      <div class="child divFlex">
+        <div class="row">
+          <h1 class="text-white text-center">Você deseja me ter novamente?</h1>
+        </div>
         <div class="row">
           <div class="col-auto">
             <!-- BOTÃO SIM -->
-              <button class="btn btn-success" id="btn-sim" style="font-weight: bold; " data-bs-toggle="modal" data-bs-target="#modalApaixonada" ><i class="bi bi-hand-thumbs-up-fill"></i> SIM</button>
+            <button class="btn text-white card_deal" id="btn-sim" onmouseenter="movebtnSim(this)" data-bs-toggle="modal"
+              style="position: relative; background: rgb(11,214,30);
+            background: linear-gradient(0deg, rgba(11,214,30,1) 32%, rgba(19,228,22,1) 66%); width: 100px;"
+              data-bs-target="#modalApaixonada"><i class="bi bi-hand-thumbs-up-fill"></i> SIM</button>
           </div>
-          <div class="col-auto">
+          <div class="col-auto ">
             <!-- BOTÃO NÃO -->
-            <button class="btn btn-danger" onmouseenter="movebtn(this)"  onclick="movebtn(this)" style="position: absolute; width: 100px; font-weight: bold; cursor: pointer;" id="btn-nao"><i class="bi bi-hand-thumbs-down-fill"></i> NÃO</button>
+            <button class="btn text-white  card_deal" onmouseenter="movebtn(this)" onclick="movebtn(this)" style="position: absolute; width: 100px; font-weight: bold;cursor: pointer; background: rgb(209,4,4);
+              background: linear-gradient(0deg, rgba(209,4,4,1) 32%, rgba(245,67,67,1) 66%);" id="btn-nao"><i
+                class="bi bi-hand-thumbs-down-fill"></i> NÃO</button>
           </div>
-          
-      </div>
-      </div>
-    </div>
 
+        </div>
+        <br>
+        <div style="cursor: pointer;  align-items: center;" title="Clique aqui" onclick="cantadas()" class="row m-3">
+          <div class="col-auto">
+            <h6 class="text-white fs-1" id="frases"></h6>
+          </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="modalApaixonada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Agora já era!</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img class="card-img-top" src="https://static.vecteezy.com/system/resources/previews/001/187/508/non_2x/heart-png.png">
-            <h3 class="text-center">Te amo!</h3>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-            
-          </div>
         </div>
       </div>
     </div>
-    
-    
-    <script> 
- //FUNÇÃO QUE RANDOMIZA A POSIÇÃO DO BOTÃO
-  function movebtn(x) {  
-    x.style.margin = Math.floor((Math.random() * 400)+50)+"px";  
-    x.style.left = Math.floor((Math.random() * 400)+100)+"px";
-    x.style.top = Math.floor((Math.random() * 200)+1)+"px";
-    x.style.right = Math.floor((Math.random() * 300)+150)+"px";
-   
-  }
+  </div>
 
-    </script>
 
-    <style>
-      .container {
+  <!-- Modal -->
+  <div class="modal fade" id="modalApaixonada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Achou que ia fugir de mim?!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="card-img-top"
+            src="https://static.vecteezy.com/system/resources/previews/001/187/508/non_2x/heart-png.png">
+          <h3 class="text-center">Parabéns! Agora você poderá me ter!</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    //FUNÇÃO QUE RANDOMIZA A POSIÇÃO DO BOTÃO
+    function movebtn(x) {
+      x.style.margin = Math.floor((Math.random() * 200) + 150) + "px";
+      x.style.left = Math.floor((Math.random() * 400) + 100) + "px";
+      x.style.top = Math.floor((Math.random() * 200) + 1) + "px";
+      x.style.right = Math.floor((Math.random() * 300) + 150) + "px";
+
+    }
+
+    function movebtnSim(x) {
+      x.style.left = 500 + "px";
+
+    }
+
+
+    function cantadas() {
+      const cantadas = ["Gata, perto de você eu sou como o Internet Explorer: só de você olhar pra mim, eu já travo.🥰", "Nem a mais potente placa de vídeo iria reproduzir os gráficos da sua beleza 💖",
+        "Pra que aprender Python ou Java, se a única língua que me interessa é a sua💖", "Você hackeou o Google? Porque qualquer coisa que eu procuro, sempre te encontro.😘",
+        "Me joga no Google, me chama de pesquisa e me diz que eu sou tudo aquilo que você procurava! 💖", "Moça, você é o HTML de meu coracao.com💖",
+        "Nenhuma placa de vídeo poderia renderizar os 100% de sua beleza😍", "Com você até o Word fica sem palavras🥰", "Me dá um Ctrl Alt Delete…acho que travei quando te vi😜",
+        "Me diz o teu IP para eu poder fazer um acesso remoto no teu coração😻", "Vou invadir seu coração, formatar todo rancor, instalar minha paixão e soltar o vírus do amor😍",
+        "Deixa eu ser a instância da sua classe love no seu objeto heart?🥰", "Se você fosse uma variável, seria um ponteiro que aponta para o endereço de memória do meu coração😘", "Você não é CSS, mas é puro estilo😉",
+        "Você é o processador que a minha placa mãe pediu a Dell😎 ", "Você não é SGDB (Sistema Gerenciador de Banco de Dados), mas quero te dar um Insert😎"];
+
+      const numero = Math.floor(Math.random() * cantadas.length);
+      console.log(cantadas[numero]);
+      $("#frases").html("Clique na frase: " + cantadas[numero]);
+    }
+    cantadas();
+
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Big Shoulders Display", cursive;
+      height: 100px;
+    }
+
+    .card_deal {
+
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      border-radius: 5px;
+    }
+
+    .container {
       display: flex;
       justify-content: center;
     }
 
-      .child{        
-        margin: 0 auto;
-      }
-    </style>
+    .child {
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
 
-   
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    .divflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
-
