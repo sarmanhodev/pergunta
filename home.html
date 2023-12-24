@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <!--JQUERY-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'>
+  </script>
 
 </head>
 
@@ -24,19 +26,19 @@
     <div class="container">
       <div class="child divFlex">
         <div class="row">
-          <h1 class="text-white text-center">Você deseja me ter novamente?</h1>
+          <h1 class="text-white text-center">Aceitarias mais um date comigo?</h1>
         </div>
-        <div class="row">
+        <div class="row ">
           <div class="col-auto">
             <!-- BOTÃO SIM -->
-            <button class="btn text-white card_deal" id="btn-sim" onmouseenter="movebtnSim(this)" data-bs-toggle="modal"
-              style="position: relative; background: rgb(11,214,30);
+            <button class="btn text-white card_deal" id="btn-sim" onmouseover="movebtnSim(this)" onclick="musica()"
+              data-bs-toggle="modal" style="position: relative; background: rgb(11,214,30);
             background: linear-gradient(0deg, rgba(11,214,30,1) 32%, rgba(19,228,22,1) 66%); width: 100px;"
               data-bs-target="#modalApaixonada"><i class="bi bi-hand-thumbs-up-fill"></i> SIM</button>
           </div>
-          <div class="col-auto ">
+          <div class="col-auto">
             <!-- BOTÃO NÃO -->
-            <button class="btn text-white  card_deal" onmouseenter="movebtn(this)" onclick="movebtn(this)" style="position: absolute; width: 100px; font-weight: bold;cursor: pointer; background: rgb(209,4,4);
+            <button class="btn text-white  card_deal" onmouseover="movebtn(this)" onclick="movebtn(this)" style="position: absolute; width: 100px; font-weight: bold;cursor: pointer; background: rgb(209,4,4);
               background: linear-gradient(0deg, rgba(209,4,4,1) 32%, rgba(245,67,67,1) 66%);" id="btn-nao"><i
                 class="bi bi-hand-thumbs-down-fill"></i> NÃO</button>
           </div>
@@ -53,19 +55,19 @@
     </div>
   </div>
 
-
+  <audio src="./audio/audio.mp3" loop></audio>
   <!-- Modal -->
   <div class="modal fade" id="modalApaixonada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Achou que ia fugir de mim?!</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img class="card-img-top"
-            src="https://static.vecteezy.com/system/resources/previews/001/187/508/non_2x/heart-png.png">
-          <h3 class="text-center">Parabéns! Agora você poderá me ter!</h3>
+          <iframe src="https://giphy.com/embed/DfzHC09hY64Gk" width="480" height="248" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+          <h3 class="text-center">Parabéns! Agora você poderá me ter novamente!</h3>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
@@ -79,18 +81,23 @@
   <script>
     //FUNÇÃO QUE RANDOMIZA A POSIÇÃO DO BOTÃO
     function movebtn(x) {
-      x.style.margin = Math.floor((Math.random() * 200) + 150) + "px";
-      x.style.left = Math.floor((Math.random() * 400) + 100) + "px";
+      //x.style.margin = Math.floor((Math.random() * 200) + 150) + "px";
+      //x.style.left = Math.floor((Math.random() * 400) + 100) + "px";
       x.style.top = Math.floor((Math.random() * 200) + 1) + "px";
-      x.style.right = Math.floor((Math.random() * 300) + 150) + "px";
+      //x.style.right = Math.floor((Math.random() * 300) + 150) + "px";
 
     }
 
     function movebtnSim(x) {
-      x.style.left = 110 + "px";
+      x.style.left = 150 + "px";
 
     }
 
+    function musica() {
+      const audio = document.querySelector('audio');
+
+      audio.play();
+    }
 
     function cantadas() {
       const cantadas = ["Gata, perto de você eu sou como o Internet Explorer: só de você olhar pra mim, eu já travo.🥰", "Nem a mais potente placa de vídeo iria reproduzir os gráficos da sua beleza 💖",
@@ -113,7 +120,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: "Big Shoulders Display", cursive;
+      font-family: "Big Shoulders Display";
       height: 100px;
     }
 
@@ -156,6 +163,20 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
+    }
+
+    @media only screen and (max-width: 908px) {
+
+      /* For mobile phones: */
+      body,
+      #modalApaixonada {
+        width: 90%;
+      }
+
+      .giphy-embed {
+        width: 300px;
+        height: 280px;
+      }
     }
   </style>
 
