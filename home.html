@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRÓXIMO DESAFIO</title>
+  <title>Pedido de Namoro</title>
   <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -26,7 +26,7 @@
     <div class="container">
       <div class="child divFlex">
         <div class="row">
-          <h1 class="text-white text-center">Aceitarias mais um date comigo?</h1>
+          <h1 class="text-white text-center">Você aceita namorar comigo?</h1>
         </div>
         <div class="row ">
           <div class="col-auto">
@@ -61,13 +61,13 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Achou que ia fugir de mim?!</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Parabéns! Agora somos namorados</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <iframe src="https://giphy.com/embed/DfzHC09hY64Gk" width="480" height="248" frameBorder="0"
             class="giphy-embed" allowFullScreen></iframe>
-          <h3 class="text-center">Parabéns! Agora você poderá me ter novamente!</h3>
+          <h3 class="text-center">Eu te amo!</h3>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
@@ -81,10 +81,10 @@
   <script>
     //FUNÇÃO QUE RANDOMIZA A POSIÇÃO DO BOTÃO
     function movebtn(x) {
-      //x.style.margin = Math.floor((Math.random() * 200) + 150) + "px";
-      //x.style.left = Math.floor((Math.random() * 400) + 100) + "px";
+      x.style.margin = Math.floor((Math.random() * 200) + 150) + "px";
+      x.style.left = Math.floor((Math.random() * 400) + 100) + "px";
       x.style.top = Math.floor((Math.random() * 200) + 1) + "px";
-      //x.style.right = Math.floor((Math.random() * 300) + 150) + "px";
+      x.style.right = Math.floor((Math.random() * 300) + 150) + "px";
 
     }
 
